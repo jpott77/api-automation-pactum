@@ -6,7 +6,7 @@ describe('Positive Booking Scenario -', ()=>{
     let url = 'https://restful-booker.herokuapp.com/booking'
 
     await spec()
-    .post('https://restful-booker.herokuapp.com/booking')
+    .post(url)
     .withHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json'
