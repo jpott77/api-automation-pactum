@@ -14,7 +14,6 @@ $ npm install
 ```
 
 ## Folder Structure
-- **data:** Data files with test data used in the tests. *E.g. [credentials, error messages, etc.]*
 - **test:** Test files which include the actual tests.
 - **test/schema:** Schema files that are used for validation in the tests.
 
