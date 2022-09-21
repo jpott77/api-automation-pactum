@@ -1,7 +1,7 @@
-### Api Automation with PactumJS
+# Api Automation with PactumJS
 Pactum API Test Automation Suite for TestBash UK
 
-### Dependencies
+## Dependencies
 1. NodeJS
 2. NPM
 
@@ -13,12 +13,10 @@ $ cd api-automation-pactum
 $ npm install
 ```
 
-# Folder Structure
+## Folder Structure
 - **data:** Data files with test data used in the tests. *E.g. [credentials, error messages, etc.]*
 - **test:** Test files which include the actual tests.
 - **test/schema:** Schema files that are used for validation in the tests.
-
-# Executing tests
 
 ## Execute all tests
 `npm test`
