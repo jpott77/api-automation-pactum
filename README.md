@@ -1,5 +1,5 @@
 # Api Automation with PactumJS
-Pactum API Test Automation Suite for TestBash UK
+Pactum API Test Automation Suite
 
 ## Dependencies
 1. NodeJS
