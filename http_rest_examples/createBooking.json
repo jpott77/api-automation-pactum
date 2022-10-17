@@ -1,0 +1,11 @@
+{
+    "firstname" : "Julia",
+    "lastname" : "Brown",
+    "totalprice" : 567,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2020-01-01",
+        "checkout" : "2021-01-01"
+    },
+    "additionalneeds" : "Breakfast,Lunch"
+}
