@@ -1,0 +1,59 @@
+# Examples of HTTP Rest calls used by this workshop
+
+# Requirement: Install the REST Client for Visual Studio Code to use these http rest examples
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client 
+
+### Request variables
+@host = restful-booker.herokuapp.com
+@server = https://{{host}}
+@contentType = application/json
+@authorizationCode = YWRtaW46cGFzc3dvcmQxMjM=
+@accept = */*
+
+########### Requests
+
+### Create booking
+# @name createBooking
+POST {{server}}/booking
+Host: {{host}}
+Content-Type: {{contentType}}
+Accept: {{accept}}
+
+<@ ./createBooking.json
+
+
+### Get Booking
+# @name getBooking
+GET {{server}}/booking/{{createBooking.response.body.bookingid}}
+Host: {{host}}
+Content-Type: {{contentType}}
+Accept: {{accept}}
+Authorization: Basic {{authorizationCode}}
+
+### Update Booking
+# @name updateBooking
+PUT {{server}}/booking/{{createBooking.response.body.bookingid}}
+Host: {{host}}
+Content-Type: {{contentType}}
+Accept: {{accept}}
+Authorization: Basic {{authorizationCode}}
+
+{
+    "firstname" : "Tester",
+    "lastname" : "Brown",
+    "totalprice" : 567,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2020-01-01",
+        "checkout" : "2021-01-01"
+    },
+    "additionalneeds" : "Breakfast,Lunch"
+}
+
+### Delete booking
+# @name deleteBooking
+DELETE {{server}}/booking/{{createBooking.response.body.bookingid}}
+Host: {{host}}
+Content-Type: {{contentType}}
+Accept: {{accept}}
+Authorization: Basic {{authorizationCode}}
