@@ -3,7 +3,8 @@ const { spec } = require('pactum');
 describe('Space X Query -', ()=>{
     it('positive call', async ()=>{
 
-        let url = 'https://api.spacex.land/graphql'
+        // let url = 'https://api.spacex.land/graphql'
+        let url = 'https://main--spacex-l4uc6p.apollographos.net/graphql'
         await spec()
         .post(url)
         .withHeaders({
