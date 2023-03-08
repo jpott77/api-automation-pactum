@@ -1,5 +1,7 @@
 const { spec } = require('pactum');
 
+const starWarsSchema = require('./schema/starWarsSchema')
+
 describe('Star Wars People and Film Query -', ()=>{
     it('positive call', async ()=>{
 
@@ -32,5 +34,6 @@ describe('Star Wars People and Film Query -', ()=>{
         )
         .expectStatus(200)
         .expectBodyContains('Return of the Jedi')
+        .expectJsonSchema(starWarsSchema)
     })
 })
