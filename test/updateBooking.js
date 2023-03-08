@@ -2,7 +2,7 @@ const { spec} = require('pactum');
 
 describe('Update Booking Scenario -', () => {
   it('verify sucessfully updating a booking', async () => {
-    let url = 'https://restful-booker.herokuapp.com/booking/76'
+    let url = 'https://restful-booker.herokuapp.com/booking/9083'
 
     await spec()
       .put(url)
